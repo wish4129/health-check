@@ -11,8 +11,8 @@ import splusapi from '../component/splus.png';
 import esapi from '../component/examScheduler.ico';
 import swpapi from '../component/swp.ico';
 import splusadaptor from '../component/splus.png';
-
-export default function health({ product, serverHealth, databaseHealth, title, url, server1, database1, lastChecked, count }) {
+import { AppProps } from 'next/app';
+export default function health({ product, serverHealth, databaseHealth, title, url, server1, database1, lastChecked, count }: { product: string, serverHealth: string, databaseHealth: string, title: string, url: string, server1: string, database1: string, lastChecked: string, count: string }) {
   let serverColor = "green";
   let databaseColor = "green";
   switch (serverHealth) {
@@ -40,9 +40,9 @@ export default function health({ product, serverHealth, databaseHealth, title, u
   const sColor = `w-4 h-4 text-${serverColor}-500`;
   const dColor = `w-4 h-4 text-${databaseColor}-500`;
   let issueColor = "w-4 h-4 text-green-500";
-  if (count < 3) {
+  if (+count < 3) {
     issueColor = `w-4 h-4 text-green-500`;
-  } else if (count > 2 && count < 6) {
+  } else if (+count > 2 && +count < 6) {
     issueColor = `w-4 h-4 text-yellow-500`;
   } else {
     issueColor = `w-4 h-4 text-red-500`;
@@ -120,7 +120,7 @@ export default function health({ product, serverHealth, databaseHealth, title, u
 }
 
 
-function GlobeIcon(props) {
+function GlobeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -142,7 +142,7 @@ function GlobeIcon(props) {
 }
 
 
-function MailOpenIcon(props) {
+function MailOpenIcon(props: any) {
   return (
     <svg
       {...props}
@@ -163,7 +163,7 @@ function MailOpenIcon(props) {
 }
 
 
-function CheckCircleIcon(props) {
+function CheckCircleIcon(props: any) {
   return (
     <svg
       {...props}
@@ -184,7 +184,7 @@ function CheckCircleIcon(props) {
 }
 
 
-function ServerIcon(props) {
+function ServerIcon(props: any) {
   return (
     <svg
       {...props}
@@ -207,7 +207,7 @@ function ServerIcon(props) {
 }
 
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: any) {
   return (
     <svg
       {...props}
@@ -229,7 +229,7 @@ function DatabaseIcon(props) {
 }
 
 
-function AlertTriangleIcon(props) {
+function AlertTriangleIcon(props: any) {
   return (
     <svg
       {...props}
@@ -251,7 +251,7 @@ function AlertTriangleIcon(props) {
 }
 
 
-function XCircleIcon(props) {
+function XCircleIcon(props: any) {
   return (
     <svg
       {...props}
@@ -273,7 +273,7 @@ function XCircleIcon(props) {
 }
 
 
-function ClockIcon(props) {
+function ClockIcon(props: any) {
   return (
     <svg
       {...props}
