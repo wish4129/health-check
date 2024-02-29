@@ -7,10 +7,9 @@ const subtitle = "text-2xl flex justify-center text-white-500"
 export default function Home() {
   return (
     <div>
-      <div>
-        <Image  style={{float: 'left'}} src={techone} alt="techone" width="300" height="150"/>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Image style={{ float: 'left' }} src={techone} alt="techone" width="300" height="150" />
         <div className={title}>Health Check</div>
-        {/* <div className={subtitle}>Monitor the health of your sites and services. (Refresh every 5 minutes)</div> */}
       </div>
       <Health product="es" serverHealth="healthy" databaseHealth="healthy" title="Exam Scheduler" url="https://saas-rel-2024a.onespresso.net" server1="SAAS-REL-2024A" database1="ESDB" lastChecked="3" count="0" />
       <Health product="et" serverHealth="healthy" databaseHealth="warning" title="Enterprise Timetabler" url="https://saas-rel-2024a.onespresso.net" server1="SAAS-REL-2024A" database1="SDB2024B" lastChecked="3" count="3" />
