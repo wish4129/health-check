@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Health from '../components/component/health';
-
+import techone from '../components/component/techone.svg';
 const title = "text-4xl flex justify-center text-[#FEBD10]"
 const subtitle = "text-2xl flex justify-center text-white-500"
 
@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <div>
       <div>
+        <Image  style={{float: 'left'}} src={techone} alt="techone" width="300" height="150"/>
         <div className={title}>Health Check</div>
         <div className={subtitle}>Monitor the health of your sites and services. (Refresh every 5 minutes)</div>
       </div>
